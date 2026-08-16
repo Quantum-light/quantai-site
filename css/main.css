@@ -8,8 +8,9 @@
   --ink: #16120E;
   --line: #E6DFD2;
   --ink-line: #3A3128;
-  --text: #201B15;
-  --muted: #6E6355;
+  --text: #4A3B28;      /* warm bronze — never black */
+  --deep: #3A2E1F;
+  --muted: #7A6C58;
   --gold: #B08D3E;
   --gold-lit: #D4B96A;
   --gold-deep: #8A6C28;
@@ -77,7 +78,7 @@ body {
 .statement {
   font-family: var(--serif); font-weight: 200;
   font-size: clamp(34px, 5.6vw, 58px);
-  line-height: 1.28; color: var(--ink);
+  line-height: 1.28; color: var(--deep);
   letter-spacing: 0.005em;
 }
 .statement em, .passage em, .statement-sm em {
@@ -87,8 +88,10 @@ body {
 .statement-sm {
   font-family: var(--serif); font-weight: 200;
   font-size: clamp(26px, 3.6vw, 38px);
-  line-height: 1.3; color: var(--ink);
+  line-height: 1.3; color: var(--deep);
 }
+
+.passage-sm { font-size: clamp(18px, 2.4vw, 24px); }
 
 .passage {
   font-family: var(--serif); font-weight: 300;
@@ -125,15 +128,20 @@ body {
 
 .wordmark {
   font-family: var(--display); font-weight: 500;
-  font-size: clamp(38px, 8.4vw, 100px);
-  letter-spacing: 0.32em; text-indent: 0.32em;
-  color: var(--ink); line-height: 1.1;
+  font-size: clamp(52px, 11.5vw, 150px);
+  letter-spacing: 0.13em; text-indent: 0.13em;
+  line-height: 1.08;
   white-space: nowrap;
+  color: var(--gold-deep);
 }
 .wordmark span {
   display: inline-block; opacity: 0;
   filter: blur(16px); transform: translateY(0.3em);
   animation: cohere 2s var(--ease) forwards;
+  background: linear-gradient(180deg, #D4B96A 4%, #B08D3E 52%, #8A6C28 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .wordmark span:nth-child(1) { animation-delay: 1.0s; }
 .wordmark span:nth-child(2) { animation-delay: 1.14s; }
@@ -209,7 +217,7 @@ body {
 
 .field input {
   font-family: var(--serif); font-weight: 300;
-  font-size: 20px; color: var(--ink);
+  font-size: 20px; color: var(--deep);
   background: transparent;
   border: 0; border-bottom: 1px solid var(--line);
   border-radius: 0;
@@ -229,13 +237,13 @@ body {
   font-family: var(--sans); font-size: 10.5px; font-weight: 500;
   letter-spacing: 0.3em; text-transform: uppercase;
   color: var(--ivory);
-  background: var(--ink);
-  border: 1px solid var(--ink);
+  background: var(--gold-deep);
+  border: 1px solid var(--gold-deep);
   padding: 15px 32px;
   cursor: pointer;
   transition: background 0.6s var(--ease), color 0.6s var(--ease);
 }
-.submit:hover { background: transparent; color: var(--ink); }
+.submit:hover { background: transparent; color: var(--gold-deep); }
 .submit[disabled] { opacity: 0.45; cursor: default; }
 
 .ticket {
@@ -266,7 +274,7 @@ body {
 .withtime {
   font-family: var(--serif); font-style: italic; font-weight: 200;
   font-size: clamp(30px, 4.6vw, 48px);
-  color: var(--ink);
+  color: var(--deep);
 }
 .gg {
   margin-top: 18px;

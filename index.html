@@ -24,7 +24,9 @@
   <!-- scroll length of the journey -->
   <div id="journey" aria-hidden="true"></div>
 
-  <!-- ═══ the scenes — fixed overlay, scrubbed by scroll ═══ -->
+  <!-- ═══ the scenes — fixed overlay, scrubbed by scroll.
+       CONTENT: Grace's words, verbatim (two typo fixes only: "Quantum", "reordering").
+       Titles added; her sentences are never rewritten. ═══ -->
   <div id="scenes">
 
     <!-- 0 · arrival -->
@@ -45,47 +47,45 @@
       <p class="cue"><span class="cue-line"></span>Begin</p>
     </section>
 
-    <!-- 1 · across time -->
-    <section class="scene" data-in="0.135" data-out="0.245">
-      <p class="statement">You have made it here<br/><em>across time.</em></p>
+    <!-- 1 · welcome -->
+    <section class="scene" data-in="0.135" data-out="0.30">
+      <p class="kicker">Welcome</p>
+      <p class="passage">Welcome to QUANTAI, you have made it here across time —
+      where we study, map and bring time into greater coherence through trading
+      time and capital to prove the theories of time of Quantum Light Science.</p>
     </section>
 
-    <!-- 2 · welcome — CONTENT: Grace's words -->
-    <section class="scene" data-in="0.265" data-out="0.385">
-      <p class="kicker">Welcome to QUANTAI</p>
-      <p class="passage">Where we study, map and bring time into greater coherence —
-      trading time and capital to prove the theories of time of
-      Quantum Light Science.</p>
-    </section>
-
-    <!-- 3 · the science -->
-    <section class="scene" data-in="0.405" data-out="0.515">
+    <!-- 2 · the science -->
+    <section class="scene" data-in="0.32" data-out="0.46">
       <p class="kicker">The Science</p>
-      <p class="statement">Built upon the science of<br/><em>Quantum Light Time</em></p>
-      <p class="attrib">and Quantum Light Science · by Grace Gold</p>
+      <p class="passage">This trading algorithm is built upon the science of
+      <em>Quantum Light Time</em> and Quantum Light Science, and by Grace Gold.</p>
       <!-- VIDEO: drop media/science.mp4 to let footage breathe behind this scene -->
       <video class="scene-film" playsinline muted loop preload="metadata" aria-hidden="true">
         <source src="media/science.mp4" type="video/mp4" />
       </video>
     </section>
 
-    <!-- 4 · in time — the fund -->
-    <section class="scene" data-in="0.535" data-out="0.615">
+    <!-- 3 · in time -->
+    <section class="scene" data-in="0.48" data-out="0.585">
       <p class="kicker">In Time</p>
-      <p class="passage">QUANTAI will be a £50M fund trading time — mapping the systems
-      of time for science, profit and purpose, to evidence Quantum Light Time.</p>
+      <p class="passage">In time, QUANTAI will be a £50M fund trading time, and
+      mapping the systems of time for science, profit and purpose to evidence
+      <em>Quantum Light Time</em>.</p>
     </section>
 
-    <section class="scene" data-in="0.63" data-out="0.70">
-      <p class="passage"><em>In time,</em> there will be a fund that gives back —
-      funding Quantum Light Time research in other forms.<br/>
+    <section class="scene" data-in="0.60" data-out="0.70">
+      <p class="passage">In time, there will be a fund that gives back to fund
+      Quantum Light Time research in other forms.<br/>
       <span class="quiet">This will come in time.</span></p>
     </section>
 
-    <!-- 5 · register -->
+    <!-- 4 · register -->
     <section class="scene scene-register" data-in="0.72" data-out="0.845">
-      <p class="kicker">Limited Partners · at the right time</p>
-      <p class="statement-sm">Once there is enough proof and data,<br/>a few will join us.</p>
+      <p class="kicker">Limited Partners</p>
+      <p class="passage passage-sm">For interest in becoming an LP at the right time,
+      once we have enough proof and data, you can register your interest here.
+      <span class="quiet">(Minimum ticket = £250k)</span></p>
       <form id="lp-form" novalidate>
         <div class="field"><label for="lp-name">Name</label>
           <input id="lp-name" name="full_name" type="text" autocomplete="name" required maxlength="200" /></div>
@@ -95,28 +95,27 @@
           <input id="lp-company" name="company" type="text" tabindex="-1" autocomplete="off" /></div>
         <div class="form-foot">
           <button class="submit" type="submit">Register interest</button>
-          <span class="ticket">Minimum ticket · £250,000</span>
         </div>
         <p class="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
 
-    <!-- 6 · the record — CONTENT: Grace's words verbatim. Edited only by Grace. -->
-    <section class="scene scene-letter" data-in="0.865" data-out="0.955">
+    <!-- 5 · the record -->
+    <section class="scene scene-letter" data-in="0.865" data-out="0.94">
       <p class="kicker">The Record</p>
-      <p class="letter">This has been written by the human Grace Gold, 16/08/26 18:10,
-      when she first announced it on this day on Human Time with GG — and spoke about
-      the reordering of time that day too. In time you will come to know time more,
-      through the web of media that has been woven; and in time QUANTAI will be a
-      foundational piece of profitable science, funding scientific research for
-      Quantum Light Science.</p>
+      <p class="letter">For now, welcome here to QUANTAI. This has been written by
+      the human Grace Gold 16/08/26 18:10 when she first announced it on this day
+      on Human Time with GG and spoke about the reordering of time that day too.
+      In time you will come to know time more through the web of media that has
+      been woven, and in time QUANTAI will be a foundational piece of profitable
+      science funding scientific research for Quantum Light Science.</p>
     </section>
 
-    <!-- 7 · with time -->
+    <!-- 6 · with time -->
     <section class="scene scene-close" data-in="0.945" data-out="1.05">
       <p class="withtime"><em>With Time</em></p>
       <p class="gg">G.G</p>
-      <p class="colophon">QUANTAI · A Quantum Light Science company · © 2026</p>
+      <p class="colophon">QUANTAI · Quantum Light Science · © 2026</p>
     </section>
 
   </div>
