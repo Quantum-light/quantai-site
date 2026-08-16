@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>QUANTAI — Brand</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ivory: #FAF7F1;
+    --ink: #16120E;
+    --ink-2: #241E17;
+    --line: #E6DFD2;
+    --ink-line: #3A3128;
+    --text: #201B15;
+    --muted: #6E6355;
+    --ink-text: #E9E2D4;
+    --ink-muted: #9A8F7E;
+    --gold: #B08D3E;
+    --gold-lit: #D4B96A;
+    --gold-deep: #8A6C28;
+    --display: 'Cinzel', 'Palatino Linotype', Georgia, serif;
+    --serif: 'Crimson Pro', Georgia, serif;
+    --sans: 'Satoshi', -apple-system, Helvetica, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--ivory); color: var(--text);
+    font-family: var(--sans); font-weight: 300;
+    font-size: 16px; line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+
+  /* cover */
+  .cover { min-height: 92vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .cover .mark { width: 140px; height: 140px; margin-bottom: 44px; }
+  .cover h1 { font-family: var(--display); font-weight: 500; font-size: 44px; letter-spacing: 0.34em; text-indent: 0.34em; color: var(--ink); }
+  .cover .tag { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 20px; color: var(--muted); margin-top: 18px; }
+  .cover .doc { margin-top: 60px; font-size: 10px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold-deep); }
+
+  section { padding: 90px 0; border-top: 1px solid var(--line); }
+  .num { font-family: var(--display); font-size: 15px; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 10px; }
+  h2 { font-family: var(--serif); font-weight: 300; font-size: 34px; color: var(--ink); margin-bottom: 28px; }
+  p { max-width: 62ch; }
+  p + p { margin-top: 16px; }
+  .big {
+    font-family: var(--serif); font-weight: 200; font-size: 30px; line-height: 1.45;
+    color: var(--ink); max-width: 30ch; margin: 26px 0 8px;
+  }
+  em { font-family: var(--serif); }
+
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 40px; }
+  @media (max-width: 700px) { .duo { grid-template-columns: 1fr; } }
+  .plate { border: 1px solid var(--line); padding: 56px 20px; display: flex; align-items: center; justify-content: center; min-height: 280px; }
+  .plate.dark { background: var(--ink); border-color: var(--ink); }
+  .plate .mark { width: 120px; height: 120px; }
+  .plate-label { font-size: 10px; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted); margin-top: 12px; text-align: center; }
+
+  .rules { margin-top: 34px; display: flex; flex-direction: column; gap: 14px; }
+  .rule { display: grid; grid-template-columns: 26px 1fr; gap: 16px; align-items: baseline; }
+  .rule i { font-family: var(--display); font-style: normal; font-size: 13px; color: var(--gold); }
+
+  /* palette */
+  .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 40px; }
+  @media (max-width: 700px) { .swatches { grid-template-columns: repeat(2, 1fr); } }
+  .sw { display: flex; flex-direction: column; gap: 10px; }
+  .sw .chip { height: 130px; border: 1px solid var(--line); }
+  .sw .n { font-size: 12.5px; font-weight: 500; color: var(--ink); }
+  .sw .h { font-size: 11px; letter-spacing: 0.08em; color: var(--muted); }
+
+  /* type */
+  .spec { margin-top: 40px; display: flex; flex-direction: column; gap: 44px; }
+  .spec-row { border-top: 1px solid var(--line); padding-top: 26px; }
+  .spec-role { font-size: 10px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 16px; }
+  .s-cinzel { font-family: var(--display); font-weight: 500; font-size: 40px; letter-spacing: 0.3em; color: var(--ink); }
+  .s-crimson { font-family: var(--serif); font-weight: 200; font-size: 36px; line-height: 1.4; color: var(--ink); }
+  .s-satoshi { font-family: var(--sans); font-weight: 400; font-size: 17px; color: var(--text); max-width: 58ch; }
+  .spec-note { font-size: 13px; color: var(--muted); margin-top: 14px; }
+
+  .dont { color: var(--muted); }
+  .dont s { text-decoration-color: rgba(176,141,62,0.6); }
+
+  .sig { padding: 100px 0 120px; text-align: center; border-top: 1px solid var(--line); }
+  .sig .w { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 19px; color: var(--muted); }
+  .sig .gg { font-family: var(--display); font-size: 20px; letter-spacing: 0.26em; color: var(--gold-deep); margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<!-- ═══ the mark, reused ═══ -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <g id="coherence-mark">
+      <!-- three threads of time, converging into one ring -->
+      <circle cx="60" cy="60" r="44" fill="none" stroke-width="1.2" pathLength="100"
+              stroke-dasharray="86 14" transform="rotate(-22 60 60)" />
+      <circle cx="60" cy="60" r="37.5" fill="none" stroke-width="0.85" opacity="0.72" pathLength="100"
+              stroke-dasharray="76 24" transform="rotate(4 60 60)" />
+      <circle cx="60" cy="60" r="31.5" fill="none" stroke-width="0.6" opacity="0.5" pathLength="100"
+              stroke-dasharray="64 36" transform="rotate(32 60 60)" />
+      <!-- the thread arriving from outside time -->
+      <path d="M16,117 C 66,112 104,72 89,31" fill="none" stroke-width="0.7" opacity="0.85" />
+      <!-- the point of coherence -->
+      <circle class="pt" cx="88.6" cy="26.9" r="2.3" stroke="none" />
+    </g>
+  </defs>
+</svg>
+
+<div class="page">
+
+  <header class="cover">
+    <svg class="mark" viewBox="0 0 120 120" aria-label="The QUANTAI mark">
+      <use href="#coherence-mark" stroke="#B08D3E" style="color:#B08D3E" fill="none"/>
+      <circle cx="88.6" cy="26.9" r="2.3" fill="#B08D3E"/>
+    </svg>
+    <h1>QUANTAI</h1>
+    <p class="tag">The Time Trading Fund for a New Time</p>
+    <p class="doc">Brand · Volume I · 2026</p>
+  </header>
+
+  <section>
+    <p class="num">I</p>
+    <h2>Essence</h2>
+    <p class="big">Coherence.<br/>Scattered light, drawn into golden order.</p>
+    <p>QUANTAI exists to bring time into greater coherence — studying it, mapping it,
+    and trading it to prove the theories of Quantum Light Science. The brand is that
+    exact motion made visible: threads of light arriving from different directions of
+    time, weaving into one structure, building a foundation of abundance.</p>
+    <p>The brand never shows money. No coins, no charts, no green and red. Abundance
+    is expressed as light, order and foundation — profit is evidence, not the product.</p>
+  </section>
+
+  <section>
+    <p class="num">II</p>
+    <h2>The Mark — the Point of Coherence</h2>
+    <p>Three threads of time — each an incomplete ring, each travelling at its own
+    radius — converge toward a single point of light where the circle completes.
+    A fourth thread arrives from outside the ring: the visitor, made it here across
+    time. The mark is drawn in hairlines only; it is jewellery, not signage.</p>
+    <div class="duo">
+      <div>
+        <div class="plate">
+          <svg class="mark" viewBox="0 0 120 120">
+            <g stroke="#B08D3E" fill="none">
+              <circle cx="60" cy="60" r="44" stroke-width="1.2" pathLength="100" stroke-dasharray="86 14" transform="rotate(-22 60 60)"/>
+              <circle cx="60" cy="60" r="37.5" stroke-width="0.85" opacity="0.72" pathLength="100" stroke-dasharray="76 24" transform="rotate(4 60 60)"/>
+              <circle cx="60" cy="60" r="31.5" stroke-width="0.6" opacity="0.5" pathLength="100" stroke-dasharray="64 36" transform="rotate(32 60 60)"/>
+              <path d="M16,117 C 66,112 104,72 89,31" stroke-width="0.7" opacity="0.85"/>
+            </g>
+            <circle cx="88.6" cy="26.9" r="2.3" fill="#B08D3E"/>
+          </svg>
+        </div>
+        <p class="plate-label">On ivory — thread gold</p>
+      </div>
+      <div>
+        <div class="plate dark">
+          <svg class="mark" viewBox="0 0 120 120">
+            <g stroke="#D4B96A" fill="none">
+              <circle cx="60" cy="60" r="44" stroke-width="1.2" pathLength="100" stroke-dasharray="86 14" transform="rotate(-22 60 60)"/>
+              <circle cx="60" cy="60" r="37.5" stroke-width="0.85" opacity="0.72" pathLength="100" stroke-dasharray="76 24" transform="rotate(4 60 60)"/>
+              <circle cx="60" cy="60" r="31.5" stroke-width="0.6" opacity="0.5" pathLength="100" stroke-dasharray="64 36" transform="rotate(32 60 60)"/>
+              <path d="M16,117 C 66,112 104,72 89,31" stroke-width="0.7" opacity="0.85"/>
+            </g>
+            <circle cx="88.6" cy="26.9" r="2.3" fill="#D4B96A"/>
+          </svg>
+        </div>
+        <p class="plate-label">On espresso — lit gold</p>
+      </div>
+    </div>
+    <div class="rules">
+      <div class="rule"><i>i</i><p>The mark lives on ivory or espresso only. Never on photography, never on colour.</p></div>
+      <div class="rule"><i>ii</i><p>Clearspace equals the radius of the inner ring. The mark is never smaller than 28px.</p></div>
+      <div class="rule"><i>iii</i><p>In motion, the mark is always <em>drawn</em> — threads travel their arcs and the point arrives last. It never fades in as a whole.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="num">III</p>
+    <h2>Palette — light on ivory</h2>
+    <p>Ivory is the ether — it carries everything. Espresso is ceremony and frame.
+    Gold is light itself and is spent like light: rarely, and in threads. The working
+    ratio is 90 ivory · 7 espresso · 3 gold.</p>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#FAF7F1"></div><span class="n">Ivory Ether</span><span class="h">#FAF7F1</span></div>
+      <div class="sw"><div class="chip" style="background:#16120E"></div><span class="n">Espresso</span><span class="h">#16120E</span></div>
+      <div class="sw"><div class="chip" style="background:#B08D3E"></div><span class="n">Thread Gold</span><span class="h">#B08D3E</span></div>
+      <div class="sw"><div class="chip" style="background:#D4B96A"></div><span class="n">Lit Gold</span><span class="h">#D4B96A</span></div>
+      <div class="sw"><div class="chip" style="background:#8A6C28"></div><span class="n">Deep Gold</span><span class="h">#8A6C28</span></div>
+    </div>
+    <p class="dont" style="margin-top:34px">Never: <s>green for gains</s> · <s>red for losses</s> · <s>gradients of many colours</s> · <s>pure black, pure white</s>.</p>
+  </section>
+
+  <section>
+    <p class="num">IV</p>
+    <h2>Typography — three voices</h2>
+    <div class="spec">
+      <div class="spec-row">
+        <p class="spec-role">Ceremony — Cinzel</p>
+        <p class="s-cinzel">QUANTAI</p>
+        <p class="spec-note">The wordmark, numerals, and nothing else. Tracking 0.3em or wider. Cinzel appearing twice on one surface is once too many.</p>
+      </div>
+      <div class="spec-row">
+        <p class="spec-role">The Voice — Crimson Pro Light</p>
+        <p class="s-crimson">You have made it here across time.</p>
+        <p class="spec-note">Titles, statements, and Grace's letters — weight 200–300, generous leading. Italic for the signature register: <em style="font-style:italic">With Time.</em></p>
+      </div>
+      <div class="spec-row">
+        <p class="spec-role">Information — Satoshi</p>
+        <p class="s-satoshi">Everything that must simply be read: interface, captions, data, forms. Weight 300–500. Uppercase labels track at 0.26em and stay small.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="num">V</p>
+    <h2>Motion — everything arrives by coherence</h2>
+    <p class="big">Nothing appears.<br/>Everything <em>arrives</em>.</p>
+    <div class="rules">
+      <div class="rule"><i>i</i><p>Elements come into being the way the fund's thesis says time behaves: from scattered to ordered — blur resolves to sharpness, threads align, then hold absolutely still.</p></div>
+      <div class="rule"><i>ii</i><p>Durations are unhurried: 1.2–2.4 seconds, one custom ease (0.22, 1, 0.36, 1). Nothing bounces, nothing spins, nothing hurries.</p></div>
+      <div class="rule"><i>iii</i><p>Light travels along threads in different directions — forward, backward, oscillating, inward. Time visibly moves more than one way in every scene.</p></div>
+      <div class="rule"><i>iv</i><p>Scroll is travel. The visitor does not move down a page; they move <em>through</em> the lattice, and the world reorders around them.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="num">VI</p>
+    <h2>Imagery — rendered light, never stock</h2>
+    <p>All imagery is rendered or filmed light: golden threads in ivory ether, weaves
+    coming into order, foundations of fine golden structure, horizons that glow. Depth
+    of field is shallow; the world is dimensional and quiet, as if seen from slightly
+    outside time.</p>
+    <p class="dont" style="margin-top:18px">Never: <s>trading screens</s> · <s>coins, notes, bulls or bears</s> · <s>hands and handshakes</s> · <s>cityscapes at night</s> · <s>blue technology glows</s>.</p>
+  </section>
+
+  <section>
+    <p class="num">VII</p>
+    <h2>Voice — declarative, warm, temporal</h2>
+    <p>The brand speaks in short declaratives with time folded into every promise:
+    <em>“In time.” “At the right time.” “With Time.”</em> It never persuades, never
+    urges. It states what will come, and lets time prove it.</p>
+    <p>Grace's words are the primary record and are never edited. Derived copy may be
+    wrong; her words may not.</p>
+  </section>
+
+  <div class="sig">
+    <p class="w">With Time</p>
+    <p class="gg">G.G</p>
+  </div>
+
+</div>
+</body>
+</html>

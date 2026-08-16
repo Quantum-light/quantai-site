@@ -9,173 +9,123 @@
   <meta property="og:description" content="The Time Trading Fund for a New Time." />
   <meta name="theme-color" content="#FAF7F1" />
 
-  <!-- Typography — D-8: Cinzel (display) / Crimson Pro (serif) / Satoshi (body) -->
+  <!-- Typography — D-8: Cinzel (ceremony) / Crimson Pro (voice) / Satoshi (information) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Crimson+Pro:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
 
-  <!-- The lattice — fixed behind everything. Time moves through it in different directions. -->
+  <!-- The ether — one continuous scene. Scroll is travel; the world reorders. -->
   <canvas id="lattice" aria-hidden="true"></canvas>
-  <div class="veil" aria-hidden="true"></div>
 
-  <!-- ═══════════════ I · ARRIVAL ═══════════════ -->
-  <header class="hero" id="arrival">
-    <div class="hero-inner">
-      <svg class="hero-mark" viewBox="0 0 64 64" aria-hidden="true">
-        <circle cx="32" cy="32" r="26" fill="none" stroke-width="1"/>
-        <circle cx="32" cy="32" r="17" fill="none" stroke-width="0.6" opacity="0.55"/>
-        <path d="M32 15 L32 32 L44 40" fill="none" stroke-width="1.2" stroke-linecap="round"/>
-        <circle class="fill" cx="32" cy="6" r="1.6" stroke="none"/>
+  <!-- scroll length of the journey -->
+  <div id="journey" aria-hidden="true"></div>
+
+  <!-- ═══ the scenes — fixed overlay, scrubbed by scroll ═══ -->
+  <div id="scenes">
+
+    <!-- 0 · arrival -->
+    <section class="scene scene-hero" data-in="-0.1" data-out="0.115">
+      <svg class="mark" viewBox="0 0 120 120" aria-hidden="true">
+        <g class="mark-threads" stroke="#B08D3E" fill="none">
+          <circle cx="60" cy="60" r="44"   stroke-width="1.2"  pathLength="100" stroke-dasharray="86 14" transform="rotate(-22 60 60)"/>
+          <circle cx="60" cy="60" r="37.5" stroke-width="0.85" opacity="0.72" pathLength="100" stroke-dasharray="76 24" transform="rotate(4 60 60)"/>
+          <circle cx="60" cy="60" r="31.5" stroke-width="0.6"  opacity="0.5"  pathLength="100" stroke-dasharray="64 36" transform="rotate(32 60 60)"/>
+          <path d="M16,117 C 66,112 104,72 89,31" stroke-width="0.7" opacity="0.85"/>
+        </g>
+        <circle class="mark-pt" cx="88.6" cy="26.9" r="2.3" fill="#B08D3E"/>
       </svg>
       <h1 class="wordmark" aria-label="QUANTAI">
         <span>Q</span><span>U</span><span>A</span><span>N</span><span>T</span><span>A</span><span>I</span>
       </h1>
-      <div class="hero-rule"></div>
       <p class="hero-sub">The Time Trading Fund for a New Time</p>
-    </div>
-    <a class="scroll-cue" href="#welcome" aria-label="Begin">
-      <span class="scroll-cue-line"></span>
-      <span class="scroll-cue-word">Begin</span>
-    </a>
-  </header>
-
-  <main>
-    <!-- ═══════════════ II · WELCOME — you have made it here across time ═══════════════ -->
-    <!-- CONTENT: Grace's words. Edit copy here. -->
-    <section class="panel" id="welcome">
-      <div class="panel-inner">
-        <p class="kicker">Welcome</p>
-        <h2 class="title serif">You have made it here<br/>across time.</h2>
-        <p class="lede">
-          Welcome to QUANTAI — where we study, map and bring time into greater
-          coherence, trading time and capital to prove the theories of time of
-          Quantum Light Science.
-        </p>
-      </div>
+      <p class="cue"><span class="cue-line"></span>Begin</p>
     </section>
 
-    <!-- ═══════════════ III · THE SCIENCE ═══════════════ -->
-    <section class="panel" id="science">
-      <div class="panel-inner">
-        <p class="kicker">The Science</p>
-        <h2 class="title serif">Built upon the science of<br/>Quantum Light Time.</h2>
-        <p class="body-copy">
-          This trading algorithm is built upon the science of Quantum Light Time
-          and Quantum Light Science, and by Grace Gold.
-        </p>
-
-        <!-- VIDEO SLOT · A — replace media/science.mp4 + poster when footage is ready -->
-        <figure class="film">
-          <div class="film-frame" data-empty="true">
-            <video playsinline muted loop preload="none" poster="">
-              <source src="media/science.mp4" type="video/mp4" />
-            </video>
-            <div class="film-placeholder" aria-hidden="true">
-              <span class="film-placeholder-ring"></span>
-              <span class="film-placeholder-word">Film · forthcoming in time</span>
-            </div>
-          </div>
-          <figcaption class="film-caption">Quantum Light Time — moving imagery</figcaption>
-        </figure>
-      </div>
+    <!-- 1 · across time -->
+    <section class="scene" data-in="0.135" data-out="0.245">
+      <p class="statement">You have made it here<br/><em>across time.</em></p>
     </section>
 
-    <!-- ═══════════════ IV · IN TIME — the fund ═══════════════ -->
-    <section class="panel" id="fund">
-      <div class="panel-inner">
-        <p class="kicker">In Time</p>
-        <h2 class="title serif">A fund that trades time —<br/>for science, profit and purpose.</h2>
+    <!-- 2 · welcome — CONTENT: Grace's words -->
+    <section class="scene" data-in="0.265" data-out="0.385">
+      <p class="kicker">Welcome to QUANTAI</p>
+      <p class="passage">Where we study, map and bring time into greater coherence —
+      trading time and capital to prove the theories of time of
+      Quantum Light Science.</p>
+    </section>
 
-        <div class="intime">
-          <div class="intime-row">
-            <span class="intime-marker">I</span>
-            <p>In time, QUANTAI will be a £50M fund trading time, and mapping the
-               systems of time for science, profit and purpose — to evidence
-               Quantum Light Time.</p>
-          </div>
-          <div class="intime-row">
-            <span class="intime-marker">II</span>
-            <p>In time, there will be a fund that gives back — funding Quantum
-               Light Time research in other forms.</p>
-          </div>
-          <div class="intime-row">
-            <span class="intime-marker">III</span>
-            <p>This will come in time. For now — welcome here, to QUANTAI.</p>
-          </div>
+    <!-- 3 · the science -->
+    <section class="scene" data-in="0.405" data-out="0.515">
+      <p class="kicker">The Science</p>
+      <p class="statement">Built upon the science of<br/><em>Quantum Light Time</em></p>
+      <p class="attrib">and Quantum Light Science · by Grace Gold</p>
+      <!-- VIDEO: drop media/science.mp4 to let footage breathe behind this scene -->
+      <video class="scene-film" playsinline muted loop preload="metadata" aria-hidden="true">
+        <source src="media/science.mp4" type="video/mp4" />
+      </video>
+    </section>
+
+    <!-- 4 · in time — the fund -->
+    <section class="scene" data-in="0.535" data-out="0.615">
+      <p class="kicker">In Time</p>
+      <p class="passage">QUANTAI will be a £50M fund trading time — mapping the systems
+      of time for science, profit and purpose, to evidence Quantum Light Time.</p>
+    </section>
+
+    <section class="scene" data-in="0.63" data-out="0.70">
+      <p class="passage"><em>In time,</em> there will be a fund that gives back —
+      funding Quantum Light Time research in other forms.<br/>
+      <span class="quiet">This will come in time.</span></p>
+    </section>
+
+    <!-- 5 · register -->
+    <section class="scene scene-register" data-in="0.72" data-out="0.845">
+      <p class="kicker">Limited Partners · at the right time</p>
+      <p class="statement-sm">Once there is enough proof and data,<br/>a few will join us.</p>
+      <form id="lp-form" novalidate>
+        <div class="field"><label for="lp-name">Name</label>
+          <input id="lp-name" name="full_name" type="text" autocomplete="name" required maxlength="200" /></div>
+        <div class="field"><label for="lp-email">Email</label>
+          <input id="lp-email" name="email" type="email" autocomplete="email" required maxlength="320" /></div>
+        <div class="field hp" aria-hidden="true"><label for="lp-company">Company</label>
+          <input id="lp-company" name="company" type="text" tabindex="-1" autocomplete="off" /></div>
+        <div class="form-foot">
+          <button class="submit" type="submit">Register interest</button>
+          <span class="ticket">Minimum ticket · £250,000</span>
         </div>
-      </div>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
     </section>
 
-    <!-- ═══════════════ V · REGISTER — LP interest ═══════════════ -->
-    <section class="panel panel-ink" id="register">
-      <div class="panel-inner">
-        <p class="kicker kicker-gold">Limited Partners</p>
-        <h2 class="title serif">At the right time.</h2>
-        <p class="body-copy on-ink">
-          For interest in becoming an LP — at the right time, once we have enough
-          proof and data — you may register your interest here.
-        </p>
-        <p class="ticket">Minimum ticket · £250,000</p>
-
-        <form id="lp-form" novalidate>
-          <div class="field">
-            <label for="lp-name">Name</label>
-            <input id="lp-name" name="full_name" type="text" autocomplete="name" required maxlength="200" />
-          </div>
-          <div class="field">
-            <label for="lp-email">Email</label>
-            <input id="lp-email" name="email" type="email" autocomplete="email" required maxlength="320" />
-          </div>
-          <div class="field">
-            <label for="lp-note">A note, if you wish</label>
-            <textarea id="lp-note" name="note" rows="3" maxlength="2000"></textarea>
-          </div>
-          <!-- honeypot -->
-          <div class="field hp" aria-hidden="true">
-            <label for="lp-company">Company</label>
-            <input id="lp-company" name="company" type="text" tabindex="-1" autocomplete="off" />
-          </div>
-          <button class="submit" type="submit"><span>Register interest</span></button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
+    <!-- 6 · the record — CONTENT: Grace's words verbatim. Edited only by Grace. -->
+    <section class="scene scene-letter" data-in="0.865" data-out="0.955">
+      <p class="kicker">The Record</p>
+      <p class="letter">This has been written by the human Grace Gold, 16/08/26 18:10,
+      when she first announced it on this day on Human Time with GG — and spoke about
+      the reordering of time that day too. In time you will come to know time more,
+      through the web of media that has been woven; and in time QUANTAI will be a
+      foundational piece of profitable science, funding scientific research for
+      Quantum Light Science.</p>
     </section>
 
-    <!-- ═══════════════ VI · THE RECORD — Grace's letter, primary record ═══════════════ -->
-    <!-- CONTENT: Grace's words verbatim — the primary record. Edit only with Grace. -->
-    <section class="panel" id="record">
-      <div class="panel-inner">
-        <p class="kicker">The Record</p>
-        <div class="letter">
-          <p>
-            This has been written by the human Grace Gold, 16/08/26 18:10, when she
-            first announced it on this day on Human Time with GG — and spoke about
-            the reordering of time that day too.
-          </p>
-          <p>
-            In time you will come to know time more, through the web of media that
-            has been woven; and in time QUANTAI will be a foundational piece of
-            profitable science, funding scientific research for Quantum Light
-            Science.
-          </p>
-          <p class="letter-sign">With Time<br/><span class="letter-gg">G.G</span></p>
-        </div>
-      </div>
+    <!-- 7 · with time -->
+    <section class="scene scene-close" data-in="0.945" data-out="1.05">
+      <p class="withtime"><em>With Time</em></p>
+      <p class="gg">G.G</p>
+      <p class="colophon">QUANTAI · A Quantum Light Science company · © 2026</p>
     </section>
-  </main>
 
-  <footer class="foot">
-    <div class="foot-inner">
-      <span class="foot-brand">QUANTAI</span>
-      <span class="foot-rule"></span>
-      <span class="foot-line">A Quantum Light Science company · © 2026</span>
+  </div>
+
+  <noscript>
+    <div style="position:fixed;inset:0;background:#FAF7F1;color:#201B15;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;font-family:Georgia,serif;z-index:99">
+      <p>QUANTAI — The Time Trading Fund for a New Time.<br/>This experience needs JavaScript.</p>
     </div>
-  </footer>
+  </noscript>
 
   <script src="js/config.js"></script>
   <script src="js/lattice.js" defer></script>

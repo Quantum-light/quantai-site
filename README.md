@@ -1,9 +1,11 @@
 # quantai-site
 
-The public one-page site for **QUANTAI** — The Time Trading Fund for a New Time.
-Live at `quantai.quantumlightscience.org` (Vercel).
+The public site for **QUANTAI** — The Time Trading Fund for a New Time.
+One continuous, immersive scene: golden threads of light that come into
+coherence as the visitor scrolls — aligning, weaving a foundation, and finally
+gathering into a single point of light.
 
-A static site: no build step, no framework. Open `index.html` or serve the folder.
+Static. No frameworks, no build step, no external scripts.
 
 ```bash
 python3 -m http.server 8000   # then http://localhost:8000
@@ -13,32 +15,40 @@ python3 -m http.server 8000   # then http://localhost:8000
 
 | Path | What |
 |---|---|
-| `index.html` | The whole journey — sections marked `I · Arrival` → `VI · The Record` |
-| `css/main.css` | Design system. Tokens match the QUANTAI dashboard (ivory/espresso/gold, Cinzel/Crimson Pro/Satoshi — PRD D-8) |
-| `js/lattice.js` | The 3D time lattice (Three.js via CDN import map). Four thread families, each carrying light in a different direction of time. Scroll travels the camera through the lattice |
-| `js/main.js` | Panel reveals + LP register-interest form |
-| `js/config.js` | Supabase URL + publishable key (safe client-side; RLS is insert-only) |
-| `media/` | Video imagery goes here — see below |
+| `index.html` | The journey — eight scenes, scrubbed by scroll (`data-in` / `data-out`) |
+| `css/main.css` | Design system per `docs/brand.html` — ivory/espresso/gold, Cinzel/Crimson Pro/Satoshi |
+| `js/lattice.js` | The ether: bespoke WebGL. Ribbon threads with a chaos→order morph (uCoherence), a gather pass (uGather), horizon light, glow pass |
+| `js/main.js` | Scene scrubbing (blur→sharp arrivals) + LP register form |
+| `js/config.js` | Supabase URL + publishable key (client-safe; RLS is insert-only) |
+| `docs/brand.html` | **The brand document** — essence, the mark, palette, type, motion, imagery, voice |
+| `media/` | Film goes here — see below |
+
+## The scene timeline
+
+Scroll progress `p` drives everything:
+
+- `p 0.00–0.12` — chaos: threads scattered across time; QUANTAI emerges
+- `p 0.10–0.56` — `uCoherence` ramps: threads align and weave the golden foundation
+- `p 0.56–0.88` — travel across the foundation; register scene
+- `p 0.88–1.00` — `uGather`: all light draws toward a single point on the horizon
 
 ## Editing copy
 
-All copy lives in `index.html`, one section per `<section class="panel">`.
-Grace's words are the primary record — the letter in `#record` is verbatim and
-is edited only by Grace.
+All copy lives in `index.html`, one `<section class="scene">` per moment.
+Grace's words are the primary record — the letter in `.scene-letter` is verbatim
+and is edited only by Grace.
 
-## Video imagery
+## Film
 
-Drop footage at `media/science.mp4`, set a poster image on the `<video>` tag,
-and remove `data-empty="true"` from the `.film-frame` div. Duplicate the
-`<figure class="film">` block for additional films.
+Drop footage at `media/science.mp4` — it breathes behind the science scene
+automatically (soft radial mask, no frame). Nothing shows if the file is absent.
 
 ## LP register-interest
 
-Submissions insert into `lp_interest` in the `quantet` Supabase project
-(EU-west-1). The anon key can **insert only** — reads happen in the Supabase
-dashboard: Table Editor → `lp_interest`.
+Inserts into `lp_interest` in the `quantet` Supabase project. The anon key can
+**insert only** — read submissions in Supabase → Table Editor → `lp_interest`.
 
 ## Deploy
 
 Vercel, static preset, no build command, output directory `.` — every push to
-`main` deploys.
+`main` deploys. Production domain: `quantai.quantumlightscience.org`.
